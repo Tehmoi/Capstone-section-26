@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible"
+ content="IE=edge"><meta name="viewport"content="width=device-width, initial-scale=1.0"></meta>
+</head><body> 
+<link type="text/css" rel="stylesheet" href="/styles/styles.css"><%- include("../partials/header.ejs") %><h1 id ="fileName">beginning</h1>
+
+<h2 id= "Title">1</h2>
+
+<p id= "Text">adfwefe qef q  eq q qeeqqfeqfwf e aaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p><button id="editButton" style="background-color: rgb(116, 116, 150); color: aliceblue;"> Edit Post</button>
+
+<form id="hiddenForm" action="/submit" method="POST"><input type="text" name="fileName" id="nameOfFile" placeholder="Title"><input type="text" name="title" id="nameOfTitle" placeholder="Chapter"><input type="file" name="giveFile" placeholder="upload file"><br><textarea name="insertText" id="fullBody" placeholder="Body of text"></textarea><script>$("#fullBody").autogrow();</script>
+
+<br>
+
+<input type="submit" value="OK"></form></br>
+
+<%- include("../partials/footer.ejs") %> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="/JS/edit.js"></script>
+</body> 
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Letters</title>
+</head>
+
+<body>
+    <%- include("partials/header.ejs") %>
+
+    <h1> Home page</h1>
+    <br>
+    <h2>Recently Created Files</h2>
+
+     <% for (var key in listings) { %>
+      <ul>
+        <!-- List goes here if current second is even.
+        DEPRECATED LIST: Is no longer needed. files are created in Books folder and rendered after
+        this first list. 
+        -->
+        <%  if (listings.hasOwnProperty(key)){ %>
+          <li>
+            <a href="Books/<%=key%>"><%=key %></a>
+            
+          </li>
+          <%} %>
+  
+            <!-- Otherwise it should display the following: -->
+            <!-- <p>No items to display</p> -->
+      </ul>
+      <% }%>
+
+      <h2>Books Available</h2>
+      <ul>
+  <% files.forEach(file => { %>
+    <% const name = file.replace(/\.ejs$/, "") %> 
+    <!-- This replace function gets rid of the .ejs in the file name, so no routing errors. -->
+    <li>
+      <a href="/books/<%= name %>"><%= name %></a>
+    </li>
+  <% }) %>
+</ul>
+
+    <%- include("partials/footer.ejs") %>
+</body>
+
+
+</html>

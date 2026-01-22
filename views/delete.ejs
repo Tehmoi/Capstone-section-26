@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Letters</title>
+</head>
+
+<body>
+  <%- include("partials/header.ejs") %>
+  
+
+<h1>What post needs to go? D:</h1>
+
+  <!-- Write your code here -->
+    <!-- Write your code here -->
+  <form action="/delete" method="post">
+    <input type="text" name="fileName" id="nameOfFile" placeholder="Title">
+
+    <button type="submit">Destroy</button>
+  </form>
+  <%- include("partials/footer.ejs") %>
+</body>
+
+</html>

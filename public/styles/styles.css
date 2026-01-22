@@ -1,0 +1,23 @@
+/* Styles sheet. Mark be specific and comment where they should apply
+ */
+
+#fullBody {
+
+    width: 500px;
+    height: 500px;
+
+ }
+
+ p{
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    max-width: 70%;
+    height: 50%;
+    overflow-y: auto;
+    overflow-wrap:break-word;
+ }
+
+ #hiddenForm {
+   visibility: hidden;
+ }

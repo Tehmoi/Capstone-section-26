@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/styles/styles.css">
+  <title>Name Letters</title>
+</head>
+
+<body>
+  <%- include("partials/header.ejs") %>
+  
+
+<h1>create your post here. :D</h1>
+
+  <!-- Write your code here -->
+  <form action="/submit" method="POST">
+    <input type="text" name="fileName" id="nameOfFile" placeholder="Title">
+    <input type="text" name="title" id="nameOfTitle" placeholder="Chapter"> 
+    <input type="file" name="giveFile" placeholder="upload file">
+    <br>
+    <textarea name="insertText" id="fullBody" placeholder="Body of text"></textarea>
+    <script>$("#fullBody").autogrow();</script>
+    <br>
+    <input type="submit" value="OK">
+  </form>
+  <%- include("partials/footer.ejs") %>
+</body>
+
+</html>
